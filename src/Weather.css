@@ -1,0 +1,25 @@
+.weather {
+
+}
+
+.form {
+
+}
+
+.input{
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid;
+    margin: 0;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.submit {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid;
+    margin: 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background-color: #333;
+    color: #eee;
+}
