@@ -5,13 +5,14 @@ import WeatherDisplay from './WeatherDisplay'
 
 // TODO: style error message, style display
 
+
 function Weather() {
     const[zip, setZip] = useState('94210')
     const [unit, setUnit] = useState('')
     const [data, setData] = useState(null)
 
     async function fetchWeather() {
-        const apikey = '2b233efc1c1c77dbbeec2d4077477104'
+        const apikey = import.meta.env.VITE_OPENWEATHER_API_KEY
         const path = `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${apikey}&units=${unit}`
         const response = await fetch(path)
         const json = await response.json()
