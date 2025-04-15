@@ -3,11 +3,8 @@ import './Weather.css'
 import RadioButton from './RadioButton'
 import WeatherDisplay from './WeatherDisplay'
 
-// TODO: style error message, style display
-
-
 function Weather() {
-    const[zip, setZip] = useState('94210')
+    const[zip, setZip] = useState('')
     const [unit, setUnit] = useState('')
     const [data, setData] = useState(null)
 
@@ -44,12 +41,13 @@ function Weather() {
 
     return(
         <div className='weather'>
+            <h1 className="title-header">How's the weather in your area today?</h1>
             {data && <WeatherDisplay {...data} />}
             <form className='form' onSubmit={e => {
                 e.preventDefault()
                 fetchWeather()
             }}>
-                <div>
+                <div className='input-group'>
                     <input 
                         className='input'
                         placeholder='Enter Zip Code'
@@ -60,6 +58,7 @@ function Weather() {
                 </div>
 
                 <select 
+                    className="select-system"
                     value={unit}
                     onChange={e => setUnit(e.target.value)}
                 >
