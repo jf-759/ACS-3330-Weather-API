@@ -1,0 +1,18 @@
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.weather-display {
+    background: #c85e83;
+    background: linear-gradient(0deg,rgba(255, 209, 225, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0, 0.1)
+}
